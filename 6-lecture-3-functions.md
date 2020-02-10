@@ -122,8 +122,4 @@ console.log(someFunc());
 
 ---
 
-Functions are a Fundamental building block of JavaScript.
-
-Functions _encapsulate_ a particular task.
-
----
+[Next lecture: Switch Cases](../6-lecture-4-switch-cases)
