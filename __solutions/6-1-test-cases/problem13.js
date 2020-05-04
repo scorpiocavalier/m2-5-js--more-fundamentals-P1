@@ -9,5 +9,5 @@ let verifyEquals = require('../../assets/verify-equals');
 // JAVASCRIPT -> No
 
 function f(str) {
-    return str === str.split('').reverse().join('');
+  return str === str.split('').reverse().join('');
 }

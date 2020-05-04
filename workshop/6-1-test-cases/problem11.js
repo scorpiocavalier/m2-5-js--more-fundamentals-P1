@@ -2,30 +2,27 @@ let verifyEquals = require('./verify-equals.js');
 
 // Problem 11
 // ----------
-// Make this function return the sum of all the numbers in the input array.
-// If any element in the array is not a number, skip it. If the array is empty, return zero.
+// Make this function return the sum of the squares of all the numbers passed
+// in.
+// - If any element in the array is not a number, skip it.
+// - If no arguments are passed, return `undefined`
 
-function f(arr) {
-
+function addNumbers(...nums) {
+  // Insert missing solution please
 }
 
-// Test cases
-let inputs = [];
-let outputs = [];
+// Add 7 more test cases.
+expect(addNumbers(1, 2, 3), 14); // 1 + 2**2 + 3**2 = 1 + 4 + 9 = 14
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-    if (i >= inputs.length) throw new Error('You do not have enough test cases');
-    let expected = outputs[i];
-    let actual = f(inputs[i]);
-    verifyEquals(expected, actual);
+/**
+ * -------------------------------------------------------------------
+ * ⚠️ No changes necessary below. ⚠️
+ * -------------------------------------------------------------------
+ */
+function expect(result, value) {
+  if (result === value) {
+    console.log('✅ Test succeeded');
+  } else {
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+  }
 }
-
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-
-console.log('All tests passed for ' + __filename);

@@ -8,21 +8,23 @@ let verifyEquals = require('../../assets/verify-equals');
 // Example
 //   f("hey hello morning") returns "morning"
 
-// HINTS: 
+// HINTS:
 //    - You'll need to use the split string method
 //    - A for loop might be helpful
 
 function f(str) {
-    const words = str.split(' ');
-    let longest = '';
+  const words = str.split(' ');
+  let longest = '';
 
-    for (let i = 0; i < words.length; i++) {
-        if (longest.length <= words[i].length) longest = words[i];
-    }
-    return longest;
+  for (let i = 0; i < words.length; i++) {
+    if (longest.length <= words[i].length) longest = words[i];
+  }
+  return longest;
 }
 
 // Shorter
 function g(str) {
-    return str.split(' ').reduce((acc, curr) => (acc.length < curr.length ? curr : acc), '');
+  return str
+    .split(' ')
+    .reduce((acc, curr) => (acc.length < curr.length ? curr : acc), '');
 }

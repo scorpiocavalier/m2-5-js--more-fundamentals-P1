@@ -1,38 +1,37 @@
-// This line imports the verifyEquals function from the verify-equals.js file
-let verifyEquals = require('../../assets/verify-equals');
-
 // Problem 1
 // ---------
 // Step 1
-// Write a function that returns the first character of the string that is passed to it.
-// If the string does not have a first character, return undefined.
+// Write a function that returns the first character of the string that is
+// passed to it.
+// If it's an empty string (''), return undefined.
 
-function f(str) {
-
+function firstLetter(str) {
+  /* Your code here */
 }
 
 // Step 2
 // We need 5 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = ['max', 'bacon', 'Zebra', 'lion', ''];
-let outputs = ['m', 'b', 'Z', 'l', undefined];
+expect(firstLetter('max'), 'm');
+expect(firstLetter('bacon'), 'b');
+expect(firstLetter('Zebra'), 'Z');
+expect(firstLetter('lion'), 'l');
+expect(firstLetter(''), undefined);
 
 // Step 3
-// Run this file in the debugger.
-// If you get the "All test passed for..." message, move on to the next exercise.
+// Run this file with Node.
+// When all the tests pass, move on to the next problem
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-    if (i >= inputs.length) throw new Error('You do not have enough test cases');
-    let expected = outputs[i];
-    let actual = f(inputs[i]);
-    verifyEquals(expected, actual); // verifyEquals is imported above
+/**
+ * -------------------------------------------------------------------
+ * ⚠️ No changes necessary below. ⚠️
+ * -------------------------------------------------------------------
+ */
+function expect(result, value) {
+  if (result === value) {
+    console.log('✅ Test succeeded');
+  } else {
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+  }
 }
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-console.log('All tests passed for ' + __filename);

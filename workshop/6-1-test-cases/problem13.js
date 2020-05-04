@@ -8,27 +8,21 @@ let verifyEquals = require('../../assets/verify-equals');
 // RADAR -> Yes
 // JAVASCRIPT -> No
 
-function f(str) {
-
+function checkIsPalindrome(inputString) {
+  // Your code here
 }
 
-// Test cases
-let inputs = [];
-let outputs = [];
+// Add 6 test cases
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-    if (i >= inputs.length) throw new Error('You do not have enough test cases');
-    let expected = outputs[i];
-    let actual = f(inputs[i]);
-    verifyEquals(expected, actual);
+/**
+ * -------------------------------------------------------------------
+ * ⚠️ No changes necessary below. ⚠️
+ * -------------------------------------------------------------------
+ */
+function expect(result, value) {
+  if (result === value) {
+    console.log('✅ Test succeeded');
+  } else {
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+  }
 }
-
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-
-console.log('All tests passed for ' + __filename);

@@ -2,45 +2,42 @@ let verifyEquals = require('../../assets/verify-equals');
 
 // Problem 14
 // ----------
-// Make this function return the input string wrapped to 40 characters per line. 
-// This means you'll have to insert a newline \n character after every 40 characters in the input string. 
-// If the next character after a cut is a space, then do not display it. 
+// Make this function return the input string wrapped to 40 characters per line.
+// This means you'll have to insert a newline character after every 40
+// characters in the input string.
+//
+// - If the next character after a cut is a space, then do not display it.
+// - To represent a newline character, you can use "\n".
 
-// For example:
-// with this input:
-//      "Lorem ipsumos dolor sit amet consectetur adipisicing elit. Magni quisquam"
-
-// the output would be:
-//      Lorem ipsumos dolor sit amet consectetur
-//      adipisicing elit. Magni quisquam"
-
-// instead of:
-//      Lorem ipsumos dolor sit amet consectetur
-//       adipisicing elit. Magni quisquam
-
-// even though there is a space before the a in adipisicing
-
-function f(str) {
-
+function wrapAfter40Chars(str) {
+  // Your code here!
 }
 
-// Test cases
-let inputs = [];
-let outputs = [];
+// Test case 1: No space after newline
+expect(
+  wrapAfter40Chars(
+    'This is a very long string! It seems to go on forever. Sadly, it does not.'
+  ),
+  'This is a very long string! It seems to \ngo on forever. Sadly, it does not.'
+);
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-  if (i >= inputs.length) throw new Error('You do not have enough test cases');
-  let expected = outputs[i];
-  let actual = f(inputs[i]);
-  verifyEquals(expected, actual);
+// Test case 2: Space after newline
+expect(
+  wrapAfter40Chars('My favourite thing about cats is all the things.'),
+  'My favourite thing about cats is all the\nthings.'
+);
+
+// Add 4 more test cases
+
+/**
+ * -------------------------------------------------------------------
+ * ⚠️ No changes necessary below. ⚠️
+ * -------------------------------------------------------------------
+ */
+function expect(result, value) {
+  if (result === value) {
+    console.log('✅ Test succeeded');
+  } else {
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+  }
 }
-
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-
-console.log('All tests passed for ' + __filename);

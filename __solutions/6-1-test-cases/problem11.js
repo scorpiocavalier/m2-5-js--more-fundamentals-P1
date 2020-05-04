@@ -6,6 +6,9 @@ let verifyEquals = require('./verify-equals.js');
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
 function f(input) {
-    if (input.length === 0) return 0;
-    return input.reduce((acc, curr) => (typeof curr === 'number' ? acc + curr : acc), 0);
+  if (input.length === 0) return 0;
+  return input.reduce(
+    (acc, curr) => (typeof curr === 'number' ? acc + curr : acc),
+    0
+  );
 }

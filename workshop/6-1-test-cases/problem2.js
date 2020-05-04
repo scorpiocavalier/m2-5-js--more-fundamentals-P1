@@ -1,39 +1,41 @@
-let verifyEquals = require('../../assets/verify-equals');
-
 // Problem 2
 // ---------
-// Step 1
-// Write a function that returns the last character of the string that is passed to it.
-// If the string does not have a first character, return undefined.
 
-function f(str) {
-    
+// Step 1
+// Write a function that returns the LAST character of the string that is
+// passed to it.
+// - If it's an empty string, return `undefined`
+// - If it's a number, return `undefined`
+
+function lastCharacter(str) {
+  /* Your code here */
 }
 
 // Step 2
-// We need 5 test cases. The first input is provided.
-// Don't forget to test all of the question parameters
+// You're given 1 test case. Add 4 more, making sure to cover all of the
+// conditions specified above (don't forget empty string and number!!)
 
-let inputs = ['max'];
-let outputs = ['x'];
+expect(lastCharacter('max'), 'x');
 
-// Step 3
-// Run this file in the debugger.
-// If you get the "All test passed for..." message, move on to the next exercise.
+// Add 4 more test cases here!
+// 🌠 NOTE 🌠
+// Be creative with your tests!
+// There's an old joke about QA (Quality Assurance) testers:
+//
+//   “A QA tester walks into a bar. He orders a beer, and then 1000 beers,
+//    and then -1 beers, and then "malaise" beers, and then -Infinity beers…”
+//
+// 😂
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-    if (i >= inputs.length) throw new Error('You do not have enough test cases');
-    let expected = outputs[i];
-    let actual = f(inputs[i]);
-    verifyEquals(expected, actual);
+/**
+ * -------------------------------------------------------------------
+ * ⚠️ No changes necessary below. ⚠️
+ * -------------------------------------------------------------------
+ */
+function expect(result, value) {
+  if (result === value) {
+    console.log('✅ Test succeeded');
+  } else {
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+  }
 }
-  
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-
-console.log('All tests passed for ' + __filename);
