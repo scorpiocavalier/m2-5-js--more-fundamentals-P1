@@ -7,6 +7,7 @@
 
 function firstLetter(str) {
   /* Your code here */
+  return 5;
 }
 
 // Step 2
@@ -32,6 +33,8 @@ function expect(result, value) {
   if (result === value) {
     console.log('✅ Test succeeded');
   } else {
-    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
+    console.log(
+      `⛔️ Expected “${result}” to equal “${value}”`
+    );
   }
 }
