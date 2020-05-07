@@ -8,7 +8,7 @@
 // getLetterAtIndex("", 4);      // undefined
 // getLetterAtIndex("abc", 0);   // a
 
-function getLetterAtIndex(arr) {
+function getLetterAtIndex(str, index) {
   // Your code here
 }
 
