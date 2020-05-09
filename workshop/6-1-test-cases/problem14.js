@@ -8,7 +8,7 @@
 // - To represent a newline character, you can use "\n".
 
 function wrapAfter40Chars(str) {
-  // Your code here!
+  // Your code here
 }
 
 // Test case 1: No space after newline
@@ -21,9 +21,7 @@ expect(
 
 // Test case 2: Space after newline
 expect(
-  wrapAfter40Chars(
-    'My favourite thing about cats is all the things.'
-  ),
+  wrapAfter40Chars('My favourite thing about cats is all the things.'),
   'My favourite thing about cats is all the\nthings.'
 );
 
@@ -38,8 +36,6 @@ function expect(result, value) {
   if (result === value) {
     console.log('✅ Test succeeded');
   } else {
-    console.log(
-      `⛔️ Expected “${result}” to equal “${value}”`
-    );
+    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
 }
