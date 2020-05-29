@@ -1,6 +1,6 @@
-# Instructions
+# Module 2-5 - More JavaScript Fundamentals P1
 
-![instructions](instructions.png)
+... add more explanation here ...
 
 1. Open the debugger view
 2. Open the debugger configuration

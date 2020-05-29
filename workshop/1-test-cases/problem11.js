@@ -1,5 +1,3 @@
-let verifyEquals = require('./verify-equals.js');
-
 // Problem 11
 // ----------
 // Make this function return the sum of the squares of all the numbers passed
