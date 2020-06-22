@@ -18,13 +18,28 @@
 // f(["spoof", 10, 10]); // undefined
 
 function calculator(arr) {
-  // Your code here
+  let [action, num1, num2] = arr;
+
+  switch(action) {
+    case 'add': return num1 + num2;
+    case 'sub': return num1 - num2;
+    case 'mult': return num1 * num2;
+    default: return undefined;
+  }
 }
 
 // Step 2
 // We need 8 total test cases. The first two is provided.
 expect(calculator(['mult', 2, 4]), 8);
 expect(calculator(['add', 2, 4]), 6);
+expect(calculator(['sub', 2, 4]), -2);
+
+expect(calculator(['mult', -2, 0]), 0);
+expect(calculator(['add', -2, 4]), 2);
+expect(calculator(['sub', -2, 4]), -6);
+
+expect(calculator(['spoof', 2, 4]), undefined);
+expect(calculator([123, 2, 4]), undefined);
 
 /**
  * -------------------------------------------------------------------
