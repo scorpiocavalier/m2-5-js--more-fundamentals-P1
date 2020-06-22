@@ -13,10 +13,9 @@
 // 3. Return the sum of both elements if they are numbers, otherwise return undefined.
 const sumDigits = input => {
   return (
-    Array.isArray(input) 
-      && input.length == 2 
-      && input.every(element => Number.isInteger(element))
-      ? input.reduce((total, num) => total + num) : undefined
+      input.length == 2 
+        && input.every(element => Number.isInteger(element))
+        ? input.reduce((total, num) => total + num) : undefined
   );
 }
 
@@ -24,6 +23,8 @@ const sumDigits = input => {
 expect(sumDigits([2, 5]), 7);
 expect(sumDigits([-1, 0]), -1);
 expect(sumDigits(-1), undefined);
+expect(sumDigits('a'), undefined);
+expect(sumDigits({'a': 'b', 'c': 'd'}), undefined);
 expect(sumDigits("error"), undefined);
 expect(sumDigits(["error", -1]), undefined);
 expect(sumDigits([-1, 0, 5]), undefined);

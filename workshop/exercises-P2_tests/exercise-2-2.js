@@ -7,7 +7,7 @@
 // - If it's an empty string, return `undefined`
 // - If it's a number, return `undefined`
 
-const lastCharacter = str => typeof(str) === 'string' && str ? str[str.length - 1] : undefined;
+const lastCharacter = str => str[str.length - 1];
 
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
@@ -18,8 +18,6 @@ expect(lastCharacter('max.'), '.');
 expect(lastCharacter('max '), ' ');
 expect(lastCharacter(''), undefined);
 expect(lastCharacter(123), undefined);
-expect(lastCharacter([123]), undefined);
-expect(lastCharacter(["max"]), undefined);
 
 // 🌠 NOTE 🌠
 // Be creative with your tests!
