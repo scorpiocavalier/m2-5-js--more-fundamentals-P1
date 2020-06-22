@@ -9,13 +9,20 @@
 // getLetterAtIndex("", 4);      // undefined
 // getLetterAtIndex("abc", 0);   // a
 
-function getLetterAtIndex(str, index) {
-  // Your code here
+const getLetterAtIndex = (str, index) => {
+  let lastIndex = str.length - 1;
+  return index > lastIndex ? undefined : str[index];
 }
 
 // Add 6 more test cases
+expect(getLetterAtIndex('', 0), undefined);
+expect(getLetterAtIndex('g', 1), undefined);
+expect(getLetterAtIndex('g', -1), undefined);
+expect(getLetterAtIndex('g', 0), 'g');
 expect(getLetterAtIndex('hello', 4), 'o');
-expect(getLetterAtIndex('goodbye', 0), 'g');
+expect(getLetterAtIndex(' goodbye', 0), ' ');
+expect(getLetterAtIndex('good bye', 4), ' ');
+expect(getLetterAtIndex('g ', 1), ' ');
 
 /**
  * -------------------------------------------------------------------
