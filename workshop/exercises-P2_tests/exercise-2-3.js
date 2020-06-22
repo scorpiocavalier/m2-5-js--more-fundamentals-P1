@@ -8,13 +8,26 @@
 // HINT: You can use the typeof function to check the type of each element:
 //   - `typeof 3` returns 'number')
 
-function sumDigits(input) {
-  // Your code here
+// 1. Check if input is an array, otherwise return undefined.
+// 2. Check if the array consists exactly 2 elements, otherwise return undefined.
+// 3. Return the sum of both elements if they are numbers, otherwise return undefined.
+const sumDigits = input => {
+  return (
+    Array.isArray(input) 
+      && input.length == 2 
+      && input.every(element => Number.isInteger(element))
+      ? input.reduce((total, num) => total + num) : undefined
+  );
 }
 
 // Add 5 more test cases here! 7 total
 expect(sumDigits([2, 5]), 7);
 expect(sumDigits([-1, 0]), -1);
+expect(sumDigits(-1), undefined);
+expect(sumDigits("error"), undefined);
+expect(sumDigits(["error", -1]), undefined);
+expect(sumDigits([-1, 0, 5]), undefined);
+expect(sumDigits([-1]), undefined);
 
 /**
  * -------------------------------------------------------------------
