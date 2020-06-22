@@ -7,8 +7,13 @@
 // - If it's an empty string, return `undefined`
 // - If it's a number, return `undefined`
 
-function lastCharacter(str) {
-  // Your code here
+const lastCharacter = str => {
+  if(Number.isInteger(str))
+    return undefined;
+  else {
+    let lastChar = str.charAt(str.length - 1);
+    return lastChar == '' ? undefined : lastChar;
+  }
 }
 
 // Step 2
@@ -18,6 +23,12 @@ function lastCharacter(str) {
 expect(lastCharacter('max'), 'x');
 
 // Add 4 more test cases here!
+expect(lastCharacter('max.'), '.');
+expect(lastCharacter('max '), ' ');
+expect(lastCharacter(''), undefined);
+expect(lastCharacter(123), undefined);
+expect(lastCharacter(-123), undefined);
+
 // 🌠 NOTE 🌠
 // Be creative with your tests!
 // There's an old joke about QA (Quality Assurance) testers:
@@ -33,9 +44,5 @@ expect(lastCharacter('max'), 'x');
  * -------------------------------------------------------------------
  */
 function expect(result, value) {
-  if (result === value) {
-    console.log('✅ Test succeeded');
-  } else {
-    console.log(`⛔️ Expected “${result}” to equal “${value}”`);
-  }
+  console.log(result === value ? '✅ Test succeeded' : `⛔️ Expected “${result}” to equal “${value}”`);
 }
