@@ -26,6 +26,8 @@ You can run the files in the debugger.
 
 The file will be executed and the output will be output to the debug console.
 
+<img src="__lecture/assets/exercises-P2.gif" />
+
 ## Exercises P3 (3-1 to 3-5)
 
 - You are only allowed to modify the `app.js` file, and perhaps the `index.html`.
