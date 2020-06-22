@@ -5,10 +5,7 @@
 // Write a function that returns the first character of the string that is
 // passed to it.
 // If it's an empty string (''), return undefined.
-
-function firstLetter(str) {
-  // Your code here
-}
+const firstLetter = str => str !== '' ? str.slice(0, 1) : undefined;
 
 // Step 2
 // We need 5 test cases. The first input is provided.
