@@ -12,14 +12,29 @@
 //  - Join the results into a string
 
 function makeIntoTitle(sentence) {
-  // Your code here
+  // lowercap everything
+  let lowercasedSentence = sentence.toLowerCase();
+
+  // split into array
+  let lowSentenceArray = lowercasedSentence.split(' ');
+
+  // capitalize first letter of each word of array
+  let capSentenceArray = lowSentenceArray.map(word => {
+    let firstLetterCapitalized = word[0].toUpperCase();
+    let restOfWord = word.slice(1);
+    return firstLetterCapitalized.concat(restOfWord);
+  });
+
+  // join into string
+  let title = capSentenceArray.join(' ');
+  
+  return title;
 }
 
 // Add 6 total (5 more)
-expect(
-  makeIntoTitle('the longest road is a great song'),
-  'The Longest Road Is A Great Song'
-);
+expect(makeIntoTitle('the longest road is a great song'), 'The Longest Road Is A Great Song');
+expect(makeIntoTitle('ALL YOUR BASE ARE BELONG'), 'All Your Base Are Belong');
+expect(makeIntoTitle('hello world'), 'Hello World');
 
 /**
  * -------------------------------------------------------------------
