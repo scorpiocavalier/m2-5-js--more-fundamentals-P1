@@ -15,10 +15,25 @@
 //  - Convert the filled array into a string (use the join method) and return it
 
 function reverse(str) {
-  // Your code here
+  
+  const strArray = str.split('');
+  
+  let reversedArray = strArray.map((letter, index) => {
+    let lastIndex = str.length - 1 - index;
+    return strArray[lastIndex];
+  });
+  
+  let reversedString = reversedArray.join('');
+
+  return reversedString;
 }
 
 // We need 5 test cases
+expect(reverse('hello'), 'olleh');
+expect(reverse('hello world!'), '!dlrow olleh');
+expect(reverse('hello world to you!'), '!uoy ot dlrow olleh');
+expect(reverse('how are you?'), '?uoy era woh');
+expect(reverse('anna civic level wow racecar'), 'racecar wow level civic anna');
 
 /**
  * -------------------------------------------------------------------
